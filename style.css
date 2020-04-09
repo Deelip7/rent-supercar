@@ -1,0 +1,65 @@
+@import "https://fonts.googleapis.com/css?family=Lato:400,700";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #eee;
+  font-family: "Lato", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+#content-wrapper {
+  max-width: 100%;
+}
+
+/*--------------------------- Header ---------------------------*/
+#header {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  padding: 0rem 0.5rem;
+  box-shadow: 1px 1px 10px -2px #000000;
+}
+
+#header-img {
+  width: 10rem;
+  padding: 0;
+}
+#header-logo {
+  width: 9rem;
+  display: block;
+  margin: auto;
+}
+
+#nav-bar {
+  font-size: 1.2rem;
+  padding: 0.2rem 1rem;
+  text-align: center;
+}
+.nav-link {
+  margin-bottom: 0.5rem;
+}
+
+#email input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 0.1rem rgb(168, 168, 168) solid;
+}
+
+/*--------------------------- Hero ---------------------------*/
