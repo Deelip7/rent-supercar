@@ -40,6 +40,8 @@ a {
 #header-img {
   width: 10rem;
   padding: 0;
+  order: 0;
+  display: flex;
 }
 #header-logo {
   width: 9rem;
@@ -51,15 +53,92 @@ a {
   font-size: 1.2rem;
   padding: 0.2rem 1rem;
   text-align: center;
+  display: none;
 }
 .nav-link {
   margin-bottom: 0.5rem;
 }
 
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+#email {
+  margin-right: 1rem;
+  max-width: auto;
+  position: fixed;
+  left: 180px;
+}
 #email input {
-  width: 100%;
+  width: 30%;
   padding: 0.8rem;
   border: 0.1rem rgb(168, 168, 168) solid;
 }
 
-/*--------------------------- Hero ---------------------------*/
+#email input:focus {
+  width: 100%;
+  background: #ccc;
+  background-color: #f1f1f1;
+  outline: none;
+}
+
+input[type="email"] {
+  -webkit-transition: all 0.7s ease 0s;
+  -moz-transition: all 0.7s ease 0s;
+  -o-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s;
+}
+/*--------------------------- Menu ---------------------------*/
+
+.dropbtn {
+  padding: 0.8rem;
+  border: 0.1rem rgb(168, 168, 168) solid;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #fafafa;
+}
+
+.dropdown {
+  display: inline-block;
+  order: -1;
+}
+
+.dropdown-content {
+  order: -1;
+  padding: 2rem 0;
+  text-align: center;
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 200px;
+  min-height: 200px;
+  left: -10px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 1rem;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+/*--------------------------- email ---------------------------*/

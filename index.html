@@ -21,6 +21,18 @@
             <li class="nav-link">Pricing</li>
           </ul>
         </div>
+        <!------------------- Mobile Dropdown ------------------->
+
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Menu</button>
+          <div id="nav-dropdown-show" class="dropdown-content">
+            <a href="#hero">Home</a>
+            <a href="#shop-option">How it works</a>
+            <a href="#product-tab">Pricing</a>
+          </div>
+        </div>
+        <!------------------- Email ------------------->
+
         <div id="email">
           <form>
             <input type="email" placeholder="Enter you email to registor" />
@@ -48,8 +60,8 @@
       <div class="shop-option">
         <h2>How fast are you prepared to go?</h2>
       </div>
+      <!------------------- Product Options ------------------->
       <section id="product-tab">
-        <!------------------- Product Options ------------------->
         <div class="product-option">
           <div class="product-content">
             <div class="product-content__img"></div>
@@ -118,5 +130,28 @@
         </div>
       </footer>
     </div>
+
+    <!------------------- script ------------------->
+    <script>
+      /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("nav-dropdown-show").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropbtn")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script>
   </body>
 </html>
