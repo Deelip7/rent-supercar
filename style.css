@@ -27,7 +27,7 @@ a {
 
 /*--------------------------- Header ---------------------------*/
 #header {
-  width: 100%;
+  width: 100vw;
   background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-between;
@@ -35,19 +35,20 @@ a {
   position: fixed;
   padding: 0rem 0.5rem;
   box-shadow: 1px 1px 10px -2px #000000;
+  z-index: 2;
 }
 
 #header-img {
-  width: 10rem;
   padding: 0;
   order: 0;
   display: flex;
 }
 #header-logo {
-  width: 9rem;
+  width: 7rem;
   display: block;
-  margin: auto;
+  margin: auto 0;
 }
+/*--------------------------- Nav ---------------------------*/
 
 #nav-bar {
   font-size: 1.2rem;
@@ -68,35 +69,10 @@ a {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
-
-#email {
-  margin-right: 1rem;
-  max-width: auto;
-  position: fixed;
-  left: 180px;
-}
-#email input {
-  width: 30%;
-  padding: 0.8rem;
-  border: 0.1rem rgb(168, 168, 168) solid;
-}
-
-#email input:focus {
-  width: 100%;
-  background: #ccc;
-  background-color: #f1f1f1;
-  outline: none;
-}
-
-input[type="email"] {
-  -webkit-transition: all 0.7s ease 0s;
-  -moz-transition: all 0.7s ease 0s;
-  -o-transition: all 0.7s ease 0s;
-  transition: all 0.7s ease 0s;
-}
-/*--------------------------- Menu ---------------------------*/
+/*--------------------------- Dropdown Nav ---------------------------*/
 
 .dropbtn {
+  margin: auto 2rem;
   padding: 0.8rem;
   border: 0.1rem rgb(168, 168, 168) solid;
   cursor: pointer;
@@ -109,20 +85,18 @@ input[type="email"] {
 }
 
 .dropdown {
+  position: relative;
   display: inline-block;
-  order: -1;
 }
 
 .dropdown-content {
-  order: -1;
-  padding: 2rem 0;
+  padding: 1rem 0;
   text-align: center;
   display: none;
   position: absolute;
   background-color: #f1f1f1;
   min-width: 200px;
-  min-height: 200px;
-  left: -10px;
+  right: -10px;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -142,3 +116,40 @@ input[type="email"] {
 }
 
 /*--------------------------- email ---------------------------*/
+
+#email {
+  margin-right: 1rem;
+  max-width: auto;
+  position: fixed;
+  left: 130px;
+}
+#email input {
+  width: 30%;
+  padding: 0.8rem;
+  border: 0.1rem rgb(168, 168, 168) solid;
+}
+
+#email input:focus {
+  width: 82%;
+  background: #ccc;
+  background-color: #f1f1f1;
+  outline: none;
+}
+
+input[type="email"] {
+  -webkit-transition: all 0.7s ease 0s;
+  -moz-transition: all 0.7s ease 0s;
+  -o-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s;
+}
+
+/*--------------------------- Hero ---------------------------*/
+
+#hero {
+  padding-top: 5rem;
+  text-align: center;
+}
+
+#hero h1 {
+  padding-bottom: 1rem;
+}
