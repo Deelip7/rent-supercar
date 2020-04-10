@@ -153,3 +153,35 @@ input[type="email"] {
 #hero h1 {
   padding-bottom: 1rem;
 }
+
+img {
+  width: 100%;
+}
+/* .showcase__img.large img {
+  width: 840px;
+  height: 560px;
+} */
+
+#showcase-images {
+  display: flex;
+  justify-content: space-around;
+}
+
+.showcase__img.large {
+  flex: 2;
+  background-image: url(img/dodge.jpg);
+  background-size: contain;
+}
+
+.large img {
+  height: 100%;
+}
+
+.small img:nth-child(1) {
+  height: 45.8%;
+}
+
+.showcase__img.small {
+  flex: 1;
+  font-size: 0;
+}
