@@ -11,9 +11,6 @@
       <!------------------- Header ------------------->
 
       <header id="header">
-        <div id="header-img">
-          <img src="img/Logo.PNG" alt="" id="header-logo" />
-        </div>
         <div id="nav-bar">
           <ul>
             <li class="nav-link">Home</li>
@@ -21,7 +18,7 @@
             <li class="nav-link">Pricing</li>
           </ul>
         </div>
-        <!------------------- Mobile Dropdown ------------------->
+        <!------------------- Nav Dropdown ------------------->
 
         <div class="dropdown">
           <button onclick="myFunction()" class="dropbtn">Menu</button>
@@ -35,18 +32,26 @@
 
         <div id="email">
           <form>
-            <input type="email" placeholder="Enter email to registor" />
+            <input
+              type="email"
+              placeholder="Newsletter - Enter email your to register"
+            />
           </form>
+        </div>
+        <!------------------- Nav-img ------------------->
+
+        <div id="header-img">
+          <img src="img/Logo.PNG" alt="" id="header-logo" />
         </div>
       </header>
       <!------------------- Hero Image ------------------->
       <section id="hero">
-        <h1>Select Your SuperCar</h1>
+        <h1>Select Your Supercar</h1>
         <p></p>
         <img src="img/mcjpg.jpg" alt="" />
       </section>
       <section id="showcase">
-        <div class="showcase__video">
+        <!-- <div class="showcase__video">
           <iframe
             height="480"
             width="500"
@@ -54,15 +59,22 @@
             frameborder="0"
           >
           </iframe>
-        </div>
+        </div> -->
         <div id="showcase-images">
-          <div class="showcase__img large"></div>
+          <div class="showcase__img large">
+            <h2>Dodge Hell</h2>
+          </div>
           <div class="showcase__img small">
-            <img src="img/amg.jpg" alt="" />
-            <img src="img/porsche.jpg" alt="" />
+            <div class="showcase__img small_1">
+              <h2>Mercades AMG</h2>
+            </div>
+            <div class="showcase__img small_2">
+              <h2>Porsche 964</h2>
+            </div>
           </div>
         </div>
       </section>
+
       <div class="shop-option">
         <h2>How fast are you prepared to go?</h2>
       </div>

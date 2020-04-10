@@ -28,20 +28,22 @@ a {
 /*--------------------------- Header ---------------------------*/
 #header {
   width: 100vw;
-  background-color: rgb(255, 255, 255);
+  height: 70px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
-  padding: 0rem 0.5rem;
-  box-shadow: 1px 1px 10px -2px #000000;
+  padding: 0rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  /* box-shadow: 1px 1px 10px -2px #000000; */
+  border-bottom: rgba(0, 0, 0, 0.389) solid 0.1rem;
   z-index: 2;
 }
 
 #header-img {
   padding: 0;
-  order: 0;
   display: flex;
+  height: 100%;
 }
 #header-logo {
   width: 7rem;
@@ -72,7 +74,6 @@ a {
 /*--------------------------- Dropdown Nav ---------------------------*/
 
 .dropbtn {
-  margin: auto 2rem;
   padding: 0.8rem;
   border: 0.1rem rgb(168, 168, 168) solid;
   cursor: pointer;
@@ -96,7 +97,6 @@ a {
   position: absolute;
   background-color: #f1f1f1;
   min-width: 200px;
-  right: -10px;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -121,16 +121,16 @@ a {
   margin-right: 1rem;
   max-width: auto;
   position: fixed;
-  left: 130px;
+  left: 90px;
 }
 #email input {
-  width: 30%;
+  width: 54%;
   padding: 0.8rem;
-  border: 0.1rem rgb(168, 168, 168) solid;
+  border: 0.1rem rgba(168, 168, 168, 0.264) solid;
 }
 
 #email input:focus {
-  width: 82%;
+  width: 160%;
   background: #ccc;
   background-color: #f1f1f1;
   outline: none;
@@ -146,22 +146,28 @@ input[type="email"] {
 /*--------------------------- Hero ---------------------------*/
 
 #hero {
-  padding-top: 5rem;
-  text-align: center;
+  padding-top: 4rem;
 }
 
 #hero h1 {
-  padding-bottom: 1rem;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  font-size: 1.2rem;
+  padding: 1rem 1rem;
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgba(94, 94, 94, 0.215);
 }
 
-img {
+#hero img {
   width: 100%;
 }
-#showcase {
+/*--------------------------- video ---------------------------*/
+/* #showcase {
   display: flex;
   flex-direction: column;
 }
-/*--------------------------- video ---------------------------*/
 .showcase__video {
   position: relative;
   padding-bottom: 56.25%;
@@ -177,29 +183,89 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-}
+} */
 /*--------------------------- images ---------------------------*/
+/* .showcase__img.small {
+  flex: 1;
+  font-size: 0;
+} */
 
 #showcase-images {
   display: flex;
 }
 
+#showcase-images h2 {
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  padding: 0.8rem 1rem;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgba(94, 94, 94, 0.215);
+}
+
+.showcase__img.large h2 {
+  position: relative;
+  top: 85%;
+}
+
 .showcase__img.large {
-  flex: 1;
+  width: 50vw;
+  height: 30vh;
   background-image: url(img/dodge2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  moz-box-shadow: inset 0 0 50px 1px #000000;
+  -webkit-box-shadow: inset 0 0 50px 1px #000000;
+  box-shadow: inset 0 0 50px 1px #000000;
 }
 
-.large img {
-  height: 100%;
+.showcase__img {
+  width: 50vw;
+  height: 15vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.showcase__img.small_1 {
+  background-image: url(img/amg.jpg);
 }
 
-.small img:nth-child(1) {
-  height: 44.8%;
+.showcase__img.small_2 {
+  background-image: url(img/porsche.jpg);
 }
 
-.showcase__img.small {
-  flex: 1;
-  font-size: 0;
+/*--------------------------- Media ---------------------------*/
+
+@media (min-width: 1000px) {
+  #header {
+    width: 100vw;
+    height: 100px;
+  }
+
+  #header-logo {
+    width: 11rem;
+  }
+  .showcase__img.large {
+    width: 50vw;
+    height: 100vh;
+    padding-top: 65rem;
+  }
+
+  .showcase__img.small_1,
+  .showcase__img.small_2 {
+    width: 50vw;
+    height: 50vh;
+  }
+
+  #showcase-images h2 {
+    padding: 2.5rem 4rem !important;
+  }
+  h1 {
+    padding: 4.5rem 1rem !important;
+    font-size: 2.7rem !important;
+    left: 40% !important;
+    margin-left: 0px !important;
+  }
+  #showcase-images h2 {
+    font-size: 2.4rem;
+    top: 40%;
+  }
 }
