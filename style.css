@@ -78,6 +78,10 @@ a {
   border: 0.1rem rgb(168, 168, 168) solid;
   cursor: pointer;
   background-color: inherit;
+  -webkit-transition: all 0.7s ease 0s;
+  -moz-transition: all 0.7s ease 0s;
+  -o-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s;
 }
 
 .dropbtn:hover,
@@ -190,6 +194,12 @@ input[type="email"] {
 } */
 /*--------------------------- images ---------------------------*/
 
+#showcase {
+  width: 100%;
+  margin: auto;
+
+  background-color: rgb(255, 255, 255);
+}
 #showcase-images {
   display: flex;
 }
@@ -232,20 +242,114 @@ input[type="email"] {
   background-image: url(img/porsche.jpg);
 }
 
+/*--------------------------- images ---------------------------*/
+.shop-option {
+  background-color: rgb(255, 255, 255);
+  color: rgb(79, 79, 79);
+  text-align: center;
+  padding-top: 1rem;
+}
+
+#product-tab {
+  background-color: rgb(255, 255, 255);
+}
+
+.product-option {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem;
+}
+
+/*--------------------------- Product Card ---------------------------*/
+.product-items {
+  background-color: rgba(224, 224, 224, 0.764);
+  padding: 0.1rem;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#euro_car {
+  display: none;
+}
+
+#japan_car {
+  display: none;
+}
+
+.product-card {
+  max-width: 450px;
+  text-align: center;
+  padding: 2rem 0;
+  margin: 1rem 0.5rem;
+  background-color: rgba(255, 255, 255, 0.764);
+}
+
+.product-card__img img {
+  width: 85%;
+  height: 250px;
+  background-color: rgb(186, 38, 38);
+}
+
+.product-card__title {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin: 1rem;
+}
+.product-card__title div {
+  margin-bottom: 1rem;
+}
+
+.product-card span {
+  width: 100%;
+  margin: 0.2rem;
+  font-size: 1.2rem;
+  text-transform: initial;
+}
+
+.product-items button {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border: 0.1rem rgb(168, 168, 168) solid;
+  cursor: pointer;
+  background-color: inherit;
+}
+
 /*--------------------------- Media ---------------------------*/
 
 @media (min-width: 1000px) {
   #header {
     width: 100vw;
-    height: 100px;
+    height: 90px;
+  }
+  .dropbtn {
+    padding: 1.4rem 2rem;
+  }
+
+  #email {
+    left: 140px;
+  }
+  #email input {
+    width: 58%;
+    padding: 1.4rem 1.5rem;
+    border: 0.1rem rgba(168, 168, 168, 0.264) solid;
+  }
+  #email input:focus {
+    width: 11vw;
   }
 
   #header-logo {
-    width: 11rem;
+    width: 10.5rem;
   }
-  #email input:focus {
-    width: 10.5vw;
-  }
+
   .showcase__img.large {
     width: 50vw;
     height: 100vh;
@@ -257,7 +361,6 @@ input[type="email"] {
     width: 50vw;
     height: 50vh;
   }
-
   #showcase-images h2 {
     padding: 2.5rem 4rem !important;
   }
@@ -271,83 +374,9 @@ input[type="email"] {
     font-size: 2.4rem;
     top: 40%;
   }
-}
-/*--------------------------- images ---------------------------*/
-.shop-option {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  text-align: center;
-  margin-top: 1rem;
-  padding: 1rem;
-  font-size: 0.8rem;
-}
 
-#product-tab {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0.5rem;
-  background-color: rgb(255, 255, 255);
-}
-
-.product-option {
-  display: flex;
-  justify-content: space-around;
-  padding: 1.5rem;
-}
-
-.product-items {
-  background-color: rgb(255, 255, 255);
-  padding: 0.1rem;
-}
-
-/*--------------------------- Product Card ---------------------------*/
-#us_car {
-  /* display: none; */
-}
-
-#euro_car {
-  display: none;
-}
-
-#japan_car {
-  display: none;
-}
-.product-items {
-  background-color: rgba(224, 224, 224, 0.764);
-}
-
-.product-card {
-  text-align: center;
-  padding: 2rem 0;
-  margin: 1rem 0.5rem;
-  background-color: rgba(255, 255, 255, 0.764);
-}
-
-.product-card__img img {
-  width: 90%;
-  background-color: rgb(186, 38, 38);
-}
-
-.product-card__title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-flow: row wrap;
-}
-
-.product-card span {
-  width: 100%;
-  margin: 0.8rem 1rem;
-  font-size: 1.2rem;
-}
-
-.product-items button {
-  margin-top: 1rem;
-  padding: 0.8rem;
-  border: 0.1rem rgb(168, 168, 168) solid;
-  cursor: pointer;
-  background-color: inherit;
+  /*--------------------------- Product Card ---------------------------*/
+  .cards {
+    flex-direction: row;
+  }
 }
