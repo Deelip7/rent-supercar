@@ -124,7 +124,7 @@ a {
   left: 90px;
 }
 #email input {
-  width: 54%;
+  width: 53%;
   padding: 0.8rem;
   border: 0.1rem rgba(168, 168, 168, 0.264) solid;
 }
@@ -184,11 +184,11 @@ input[type="email"] {
   width: 100%;
   height: 100%;
 } */
-/*--------------------------- images ---------------------------*/
 /* .showcase__img.small {
   flex: 1;
   font-size: 0;
 } */
+/*--------------------------- images ---------------------------*/
 
 #showcase-images {
   display: flex;
@@ -271,4 +271,83 @@ input[type="email"] {
     font-size: 2.4rem;
     top: 40%;
   }
+}
+/*--------------------------- images ---------------------------*/
+.shop-option {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 0.8rem;
+}
+
+#product-tab {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.product-option {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem;
+}
+
+.product-items {
+  background-color: rgb(255, 255, 255);
+  padding: 0.1rem;
+}
+
+/*--------------------------- Product Card ---------------------------*/
+#us_car {
+  /* display: none; */
+}
+
+#euro_car {
+  display: none;
+}
+
+#japan_car {
+  display: none;
+}
+.product-items {
+  background-color: rgba(224, 224, 224, 0.764);
+}
+
+.product-card {
+  text-align: center;
+  padding: 2rem 0;
+  margin: 1rem 0.5rem;
+  background-color: rgba(255, 255, 255, 0.764);
+}
+
+.product-card__img img {
+  width: 90%;
+  background-color: rgb(186, 38, 38);
+}
+
+.product-card__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.product-card span {
+  width: 100%;
+  margin: 0.8rem 1rem;
+  font-size: 1.2rem;
+}
+
+.product-items button {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border: 0.1rem rgb(168, 168, 168) solid;
+  cursor: pointer;
+  background-color: inherit;
 }
