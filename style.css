@@ -292,7 +292,7 @@ input[type="email"] {
 .product-card__img img {
   width: 85%;
   height: 250px;
-  background-color: rgb(186, 38, 38);
+  background-color: rgb(142, 142, 142);
 }
 
 .product-card__title {
