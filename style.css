@@ -130,7 +130,7 @@ a {
 }
 
 #email input:focus {
-  width: 160%;
+  width: 72vw;
   background: #ccc;
   background-color: #f1f1f1;
   outline: none;
@@ -242,6 +242,9 @@ input[type="email"] {
 
   #header-logo {
     width: 11rem;
+  }
+  #email input:focus {
+    width: 10.5vw;
   }
   .showcase__img.large {
     width: 50vw;
