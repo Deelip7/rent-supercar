@@ -35,16 +35,11 @@ a {
   align-items: center;
   justify-content: space-between;
   background-color: rgb(255, 255, 255);
-  /* box-shadow: 1px 1px 10px -2px #000000; */
-  border-bottom: rgba(0, 0, 0, 0.389) solid 0.1rem;
+  box-shadow: 1px 1px 10px -2px #00000019;
+  border-bottom: 1px rgb(207, 207, 207) solid;
   z-index: 2;
 }
 
-#header-img {
-  padding: 0;
-  display: flex;
-  height: 100%;
-}
 #header-logo {
   width: 7rem;
   display: block;
@@ -58,24 +53,12 @@ a {
   text-align: center;
   display: none;
 }
-.nav-link {
-  margin-bottom: 0.5rem;
-}
 
-.nav-dropdown {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
 /*--------------------------- Dropdown Nav ---------------------------*/
 
 .dropbtn {
   padding: 0.8rem;
-  border: 0.1rem rgb(168, 168, 168) solid;
+  border: 1px rgb(168, 168, 168) solid;
   cursor: pointer;
   background-color: inherit;
   -webkit-transition: all 0.7s ease 0s;
@@ -86,33 +69,29 @@ a {
 
 .dropbtn:hover,
 .dropbtn:focus {
-  background-color: #dbefe5;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
+  background-color: #f1f1f1;
 }
 
 .dropdown-content {
-  padding: 1rem 0;
-  text-align: center;
+  text-align: left;
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   min-width: 200px;
   overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
-  padding: 1rem;
+  padding: 1.5rem;
   display: block;
+  border: 1px rgba(168, 168, 168, 0.069) solid;
+  box-shadow: 0px 8px 16px 0px rgba(178, 178, 178, 0.118);
 }
 
-.dropdown a:hover {
-  background-color: #ddd;
+.dropdown a:hover,
+.dropdown a:focus {
+  background-color: #f1f1f1;
 }
 
 .show {
@@ -128,14 +107,13 @@ a {
   left: 90px;
 }
 #email input {
-  width: 53%;
+  width: 51%;
   padding: 0.8rem;
-  border: 0.1rem rgba(168, 168, 168, 0.264) solid;
+  border: 1px rgba(168, 168, 168, 0.264) solid;
 }
 
 #email input:focus {
   width: 72vw;
-  background: #ccc;
   background-color: #f1f1f1;
   outline: none;
 }
@@ -319,7 +297,7 @@ input[type="email"] {
 .product-items button {
   margin-top: 1rem;
   padding: 0.8rem;
-  border: 0.1rem rgb(168, 168, 168) solid;
+  border: 1px rgb(168, 168, 168) solid;
   cursor: pointer;
   background-color: inherit;
 }
@@ -332,19 +310,18 @@ input[type="email"] {
     height: 90px;
   }
   .dropbtn {
-    padding: 1.4rem 2rem;
+    padding: 1rem 2rem;
   }
 
   #email {
     left: 140px;
   }
   #email input {
-    width: 58%;
-    padding: 1.4rem 1.5rem;
-    border: 0.1rem rgba(168, 168, 168, 0.264) solid;
+    width: 57.5%;
+    padding: 1rem 1.5rem;
   }
   #email input:focus {
-    width: 11vw;
+    width: 13vw;
   }
 
   #header-logo {
@@ -375,26 +352,6 @@ input[type="email"] {
     font-size: 2.4rem;
     top: 40%;
   }
-
-  /*--------------------------- Product Card ---------------------------*/
-  .cards {
-    flex-direction: row;
-  }
 }
 
 /* v ----------------------------*/
-.video-container {
-  width: 100vw;
-  max-width: 1080px;
-  height: 20vh;
-  overflow: hidden;
-  position: relative;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: -150px;
-  left: 0;
-  width: 100%;
-  height: calc(100% + 300px);
-}
