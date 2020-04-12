@@ -62,14 +62,14 @@
         </div> -->
         <div id="showcase-images">
           <div class="showcase__img large">
-            <h2>Dodge Hell</h2>
+            <!-- <h2>Dodge Hell</h2> -->
           </div>
           <div class="showcase__img small">
             <div class="showcase__img small_1">
-              <h2>Mercades AMG</h2>
+              <!-- <h2>Mercades AMG</h2> -->
             </div>
             <div class="showcase__img small_2">
-              <h2>Porsche 964</h2>
+              <!-- <h2>Porsche 964</h2> -->
             </div>
           </div>
         </div>
@@ -84,26 +84,26 @@
           <div class="product-content">
             <div class="product-content__img"></div>
             <div class="product-content__title">
-              <span>America</span>
+              <button onclick="show_us()" class="dropbtn">American</button>
             </div>
           </div>
           <div class="product-content">
             <div class="product-content__img"></div>
             <div class="product-content__title">
-              <span>Europe</span>
+              <button onclick="show_euro()" class="dropbtn">European</button>
             </div>
           </div>
           <div class="product-content">
             <div class="product-content__img"></div>
             <div class="product-content__title">
-              <span>Japan</span>
+              <button onclick="show_japan()" class="dropbtn">Japanes</button>
             </div>
           </div>
         </div>
         <!------------------- Product Card ------------------->
         <div class="product-items">
           <!------------------- American Car ------------------->
-          <div class="cards">
+          <div class="cards" id="us_car">
             <div class="product-card">
               <div class="product-card__img">
                 <img src="/img/dodge.jpg" alt="" />
@@ -211,10 +211,10 @@
           <div class="cards" id="japan_car">
             <div class="product-card">
               <div class="product-card__img">
-                <img src="/img/lambo.jpg" alt="" />
+                <img src="/img/porsche.jpg" alt="" />
               </div>
               <div class="product-card__title">
-                <div>Lamborghini Aventador SVJ</div>
+                <div>Lamborghisadsani Aventador SVJ</div>
                 <span> MSRP: From $417,826 </span>
                 <span>Horsepower: 729 hp</span>
                 <button>Rent this car</button>
@@ -271,26 +271,10 @@
     </div>
 
     <!------------------- script ------------------->
-    <script>
-      /* When the user clicks on the button, 
-      toggle between hiding and showing the dropdown content */
-      function myFunction() {
-        document.getElementById("nav-dropdown-show").classList.toggle("show");
-      }
 
-      // Close the dropdown if the user clicks outside of it
-      window.onclick = function (event) {
-        if (!event.target.matches(".dropbtn")) {
-          var dropdowns = document.getElementsByClassName("dropdown-content");
-          var i;
-          for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains("show")) {
-              openDropdown.classList.remove("show");
-            }
-          }
-        }
-      };
-    </script>
+    <script src="scripts/selectcar.js"></script>
+    <script src="scripts/navdrop.js"></script>
+
+    <!------------------- script ------------------->
   </body>
 </html>
