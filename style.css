@@ -224,7 +224,7 @@ input[type="email"] {
   background-image: url(img/dodge2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  moz-box-shadow: inset 0 0 3px #000000;
+  -moz-box-shadow: inset 0 0 3px #000000;
   -webkit-box-shadow: inset 0 0 3px #000000;
   box-shadow: inset 0 0 3px #000000;
 }
@@ -380,4 +380,21 @@ input[type="email"] {
   .cards {
     flex-direction: row;
   }
+}
+
+/* v ----------------------------*/
+.video-container {
+  width: 100vw;
+  max-width: 1080px;
+  height: 20vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: -150px;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 300px);
 }
