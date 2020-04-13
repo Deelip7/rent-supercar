@@ -13,6 +13,8 @@ body {
   font-family: "PT Sans", sans-serif;
   background-color: #eee;
   color: rgb(31, 31, 31);
+  -moz-osx-font-smoothing: grayscale; /*(For Firefox)*/
+  -webkit-font-smoothing: antialiased; /*(For Chrome and Safari)*/
 }
 
 li {
@@ -24,7 +26,7 @@ a {
   text-decoration: none;
 }
 
-#car-font {
+#sp-font {
   font-family: "Oswald", sans-serif;
   letter-spacing: 0.05rem;
 }
@@ -116,12 +118,59 @@ a {
 /*--------------------------- email ---------------------------*/
 
 #email {
-  margin-right: 1rem;
-  max-width: auto;
-  position: fixed;
-  left: 100px;
+  width: 275px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  left: 105px;
+  font-family: inherit;
+  padding: 0rem 1rem;
+  cursor: pointer;
+  /* background-color: brown; */
+  border-left: 1px rgba(168, 168, 168, 0.264) solid;
+
+  -webkit-transition: all 0.7s ease 0s;
+  -moz-transition: all 0.7s ease 0s;
+  -o-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s;
 }
-#email input {
+.email-icon {
+  position: relative;
+  /* top: -5px; */
+  left: -10px;
+  margin: auto;
+}
+
+#email-icon img {
+  width: 50px;
+}
+
+#Newsletter {
+  background-color: #ffffff;
+  border: 1px rgba(168, 168, 168, 0.264) solid;
+  border-radius: 1rem;
+  padding: 0.9rem;
+  position: relative;
+  /* left: 20px; */
+  /* display: none; */
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.7s, opacity 0.5s linear;
+}
+
+#email-icon:hover + #Newsletter {
+  /* display: block; */
+  visibility: visible;
+  opacity: 1;
+}
+.email-btn {
+  background-color: #ffffff;
+  border: 0px rgb(168, 168, 168) solid;
+  cursor: pointer;
+}
+
+/* #email input {
   width: 51%;
   padding: 0.8rem;
   border: 1px rgba(168, 168, 168, 0.264) solid;
@@ -138,7 +187,7 @@ input[type="email"] {
   -moz-transition: all 0.7s ease 0s;
   -o-transition: all 0.7s ease 0s;
   transition: all 0.7s ease 0s;
-}
+} */
 
 /*--------------------------- Hero ---------------------------*/
 
@@ -148,7 +197,7 @@ input[type="email"] {
 
 #hero-title {
   background-image: url(/img/poi_hero_bg.v02.png);
-  margin-top: 72px;
+  margin-top: 65px;
   font-family: "Faster One", cursive;
   letter-spacing: 1rem;
   text-align: center;
@@ -249,7 +298,7 @@ input[type="email"] {
 }
 .shop-option h2 {
   text-transform: uppercase;
-  padding-bottom: 1rem;
+  padding: 1rem 0 1rem 0;
 }
 .shop-option {
   font-size: 1.3rem;
@@ -260,7 +309,7 @@ input[type="email"] {
 
 .product-option {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 2.5rem 0 3rem 0;
   border-bottom: 1px rgba(168, 168, 168, 0.396) solid;
 }
@@ -332,6 +381,7 @@ footer {
   padding: 1.5rem;
   background-color: rgb(255, 255, 255);
   text-align: center;
+  border-top: 1px rgba(168, 168, 168, 0.396) solid;
 }
 
 /*--------------------------- Media ---------------------------*/
@@ -346,15 +396,21 @@ footer {
   }
 
   #email {
-    left: 140px;
+    width: 300px;
+    left: 150px;
   }
-  #email input {
+
+  .email-icon {
+    padding: 0.2rem;
+  }
+
+  /* #email input {
     width: 57.5%;
     padding: 1rem 1.5rem;
   }
   #email input:focus {
     width: 13vw;
-  }
+  } */
 
   #header-logo {
     width: 10.5rem;

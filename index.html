@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Rent Supercar</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -31,12 +32,17 @@
         <!------------------- Email ------------------->
 
         <div id="email">
-          <form>
+          <div id="email-icon">
+            <img src="/img/envelope2.png" />
+          </div>
+          <div id="Newsletter">Sign up for Newsletter</div>
+
+          <!-- <form>
             <input
               type="email"
               placeholder="Newsletter  -  Enter email your to register"
             />
-          </form>
+          </form> -->
         </div>
         <!------------------- Nav-img ------------------->
 
@@ -89,7 +95,7 @@
 
       <div class="shop-option">
         <h2>How fast are you prepared to go?</h2>
-        <span>[ Select a <span id="car-font">Supercar</span> by region]</span>
+        <span>[ Select a <span id="sp-font">Supercar</span> by region ]</span>
       </div>
       <!------------------- Product Options ------------------->
       <section id="product-tab">
@@ -263,16 +269,15 @@
       <!------------------- Footer ------------------->
       <footer>
         <div class="footer">
-          <span>Website created by Theelipan Prabakar</span>
+          <span
+            >Website created by
+            <span id="sp-font">Theelipan Prabakar</span></span
+          >
         </div>
       </footer>
     </div>
-
     <!------------------- script ------------------->
-
     <script src="scripts/selectcar.js"></script>
     <script src="scripts/navdrop.js"></script>
-
-    <!------------------- script ------------------->
   </body>
 </html>
