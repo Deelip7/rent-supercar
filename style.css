@@ -159,7 +159,8 @@ a {
   transition: visibility 0.7s, opacity 0.5s linear;
 }
 
-#email-icon:hover + #Newsletter {
+#email-icon:hover + #Newsletter,
+#email-icon:focus + #Newsletter {
   /* display: block; */
   visibility: visible;
   opacity: 1;
@@ -310,6 +311,9 @@ input[type="email"] {
 .product-option {
   display: flex;
   justify-content: space-evenly;
+  -webkit-justify-content: space-evenly !important;
+  -moz-justify-content: space-evenly !important;
+  -ms-justify-content: space-evenly !important;
   padding: 2.5rem 0 3rem 0;
   border-bottom: 1px rgba(168, 168, 168, 0.396) solid;
 }
