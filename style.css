@@ -52,7 +52,7 @@ a {
   z-index: 2;
 }
 
-#header-logo {
+#header-img {
   width: 7rem;
   display: block;
   margin: auto 0;
@@ -312,58 +312,32 @@ a {
   flex: 1;
   font-size: 0;
 } */
-/*--------------------------- images ---------------------------*/
+/*--------------------------- Gallery Images ---------------------------*/
+.gallery {
+  margin-top: -5px;
+}
 
-#showcase {
+.gallery__items {
+  background-color: rgb(217, 217, 217);
+  width: 100%;
+  height: 30vh;
+  overflow: hidden;
+  display: flex;
+  padding-bottom: 0.6px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.576);
+}
+.gallery__items img {
   width: 100%;
   height: 100%;
-  margin: auto;
-  background-color: rgb(255, 255, 255);
-  margin-top: -3.5px;
-}
-#showcase-images {
-  display: flex;
+  object-fit: cover;
 }
 
-#showcase-images h2 {
-  font-size: 1.2rem;
-  color: rgb(255, 255, 255);
-  padding: 0.8rem 1rem;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: rgba(94, 94, 94, 0.215);
+.top,
+.bottom {
+  height: 50%;
 }
 
-.showcase__img.large h2 {
-  position: relative;
-  top: 85%;
-}
-
-.showcase__img.large {
-  width: 50vw;
-  height: 30vh;
-  background-image: url(img/dodge2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  -moz-box-shadow: inset 0 0 3px #000000;
-  -webkit-box-shadow: inset 0 0 3px #000000;
-  box-shadow: inset 0 0 3px #000000;
-}
-
-.showcase__img {
-  width: 50vw;
-  height: 15vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.showcase__img.small_1 {
-  background-image: url(img/lambo.jpg);
-}
-
-.showcase__img.small_2 {
-  background-image: url(img/ford-gt2.jpg);
-}
-
-/*--------------------------- images ---------------------------*/
+/*--------------------------- Shop Option ---------------------------*/
 .shop-option {
   background-color: rgb(255, 255, 255);
   color: #4f4f4f;
@@ -461,6 +435,7 @@ footer {
   background-color: rgb(255, 255, 255);
   text-align: center;
   border-top: 1px rgba(168, 168, 168, 0.396) solid;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.576);
 }
 
 /*--------------------------- Media ---------------------------*/
@@ -483,40 +458,26 @@ footer {
     padding: 0.2rem;
   }
 
-  /* #email input {
-    width: 57.5%;
-    padding: 1rem 1.5rem;
-  }
-  #email input:focus {
-    width: 13vw;
-  } */
-
-  #header-logo {
+  #header-img {
     width: 10.5rem;
   }
 
-  .showcase__img.large {
-    width: 50vw;
-    height: 100vh;
-    padding-top: 65rem;
-  }
-
-  .showcase__img.small_1,
-  .showcase__img.small_2 {
-    width: 50vw;
-    height: 50vh;
-  }
-  #showcase-images h2 {
-    padding: 2.5rem 4rem !important;
-  }
   h1 {
     padding: 4.5rem 0 3rem 0 !important;
     font-size: 2.7rem !important;
   }
-  #showcase-images h2 {
-    font-size: 2.4rem;
-    top: 40%;
+
+  .gallery__images-large {
+    flex-grow: 1;
   }
+
+  .gallery__images-small {
+    flex-grow: 1;
+  }
+  .gallery__items {
+    height: 100vh;
+  }
+
   /*--------------------------- modal ---------------------------*/
 
   .modal {
