@@ -25,7 +25,6 @@
           <button onclick="myFunction()" class="dropbtn">Menu</button>
           <nav id="nav-dropdown-show" class="dropdown-content">
             <a href="#hero">Home</a>
-            <a href="#shop-option">How it works</a>
             <a href="#product-tab">Pricing</a>
           </nav>
         </div>
@@ -46,12 +45,22 @@
                 <p>
                   Get new releases and subscriber exclusives
                 </p>
-                <form>
-                  <input
-                    type="email"
-                    placeholder="Enter email your to register"
-                  />
-                </form>
+                <div id="form-item">
+                  <form id="email-form">
+                    <div id="input-form">
+                      <input
+                        type="email"
+                        placeholder="Enter email your to register"
+                        required
+                      />
+                    </div>
+
+                    <div id="submit-btn">
+                      <input type="submit" value="Submit" />
+                    </div>
+                  </form>
+                </div>
+
                 <span id="disclaimer"
                   >You are signing up to receive product updates and
                   newsletters. By signing up, you are consenting to our privacy
